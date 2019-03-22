@@ -1,21 +1,32 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-
+import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
 // eslint-disable-next-line
 class Navbar extends Component {
   render() {
-    console.log(styles);
+    const { name } = this.props;
+
+    // eslint-disable-next-line
     return (
       <div className={styles.navbarContainer}>
-Welcome
-{' '}
-{this.props.name}
-</div>
+        <p>{name}</p>
+        <NavLink to="a">
+          <p>Go to A</p>
+        </NavLink>
+        <NavLink to="b">
+          <p>Go to B</p>
+        </NavLink>
+      </div>
     );
   }
 }
+
+Navbar.propTypes = {
+  name: PropTypes.string.isRequired
+};
 
 function mapStateToProps({ name }) {
   return { name };
