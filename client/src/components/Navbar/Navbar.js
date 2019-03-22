@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import styles from './Navbar.module.css';
 
+// eslint-disable-next-line
 class Navbar extends Component {
   render() {
     console.log(styles);
