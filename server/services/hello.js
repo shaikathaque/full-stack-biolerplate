@@ -1,3 +1,3 @@
-const getHelloWorld = () => 'Hello World';
+const getHelloWorld = name => `Hello ${name}`;
 
 module.exports = { getHelloWorld };

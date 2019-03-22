@@ -16,7 +16,7 @@ import './App.css';
 class App extends Component {
   componentDidMount() {
     const { fetchName } = this.props;
-    fetchName();
+    fetchName('Shaikat');
   }
 
   render() {
@@ -36,10 +36,10 @@ class App extends Component {
 }
 
 App.propTypes = {
-  fetchName: PropTypes.func.isRequired,
+  fetchName: PropTypes.func.isRequired
 };
 
 export default connect(
   null,
-  actions,
+  actions
 )(App);
