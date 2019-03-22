@@ -1,6 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
+
+require('./models/User');
+
+const mongoUri = keys.mongoURI || 'mongodb://localhost:27017/test';
+mongoose.connect(mongoUri, { useNewUrlParser: true });
 
 const app = express();
 app.use(morgan('dev'));
