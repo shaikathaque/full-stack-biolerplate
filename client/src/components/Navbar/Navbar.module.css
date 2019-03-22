@@ -1,0 +1,5 @@
+.navbarContainer {
+  display: flex;
+  height: 50px;
+  border-bottom: solid 1px;
+}

@@ -1,7 +1,7 @@
 const { getHelloWorld } = require('../services/hello');
 
 module.exports = (app) => {
-  app.get('/hello', (req, res) => {
+  app.get('/api/name', (req, res) => {
     try {
       res.send(getHelloWorld());
     } catch (err) {
